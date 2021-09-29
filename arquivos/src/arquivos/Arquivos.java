@@ -40,9 +40,6 @@ public class Arquivos {
 		
 		FileWriter escrever_no_arquivo = new FileWriter(arquivo);
 		
-		escrever_no_arquivo.write("-----------/Dados Pessoais/----------- ");
-		escrever_no_arquivo.write("\n");
-		escrever_no_arquivo.write("\n");
 		
 		for (Pessoa p : pessoas) {
 			escrever_no_arquivo.write(p.getNome() + ";" + p.getEmail() + ";" + p.getIdade() + "; \n");

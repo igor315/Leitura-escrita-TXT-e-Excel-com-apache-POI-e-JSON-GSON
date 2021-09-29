@@ -3,6 +3,8 @@ package arquivos;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class LerArquivoTxt {
@@ -14,6 +16,7 @@ public class LerArquivoTxt {
 	
 		Scanner lerArquivo = new Scanner(entraArquivo, "UTF-8");
 		
+		List<Pessoa> pessoas =new ArrayList<Pessoa>();
 		
 		while(lerArquivo.hasNext()) {
 			
@@ -21,8 +24,20 @@ public class LerArquivoTxt {
 			
 			if(linha != null && !linha.isEmpty()) {
 				
-				System.out.println(linha);
+				String[] dados = linha.split("\\;");
+				
+				Pessoa pessoa = new Pessoa();
+				pessoa.setNome(dados[0]);
+				pessoa.setEmail(dados[1]);
+				pessoa.setIdade(Integer.parseInt(dados[2]));
+				
+				pessoas.add(pessoa);
 			}
+		}
+		
+		System.out.println("-----------------/Dados Pessoais/----------------- \n");
+		for (Pessoa pessoa : pessoas) {/*Poderia gravar no banco de dados, enviar E-mail, gerar boletos*/
+			System.out.println(pessoa);
 		}
 	}
 }
