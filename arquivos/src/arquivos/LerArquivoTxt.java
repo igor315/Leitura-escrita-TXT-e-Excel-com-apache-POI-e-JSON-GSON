@@ -12,7 +12,7 @@ public class LerArquivoTxt {
 	public static void main(String[] args) throws FileNotFoundException {
 		
 		FileInputStream entraArquivo =
-				new FileInputStream(new File("C:\\Users\\Area de estudo\\git\\Leitura-escrita-TXT-e-Excel-com-apache-POI-e-JSON-GSON\\arquivos\\arquivo.txt"));
+				new FileInputStream(new File("C:\\Users\\Area de estudo\\git\\Leitura-escrita-TXT-e-Excel-com-apache-POI-e-JSON-GSON\\arquivos\\arquivo.csv"));
 	
 		Scanner lerArquivo = new Scanner(entraArquivo, "UTF-8");
 		

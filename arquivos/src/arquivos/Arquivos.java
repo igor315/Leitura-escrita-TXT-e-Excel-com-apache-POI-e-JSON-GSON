@@ -32,7 +32,7 @@ public class Arquivos {
 		pessoas.add(p4);
 		
 		
-		File arquivo = new File("C:\\Users\\Area de estudo\\git\\Leitura-escrita-TXT-e-Excel-com-apache-POI-e-JSON-GSON\\arquivos\\arquivo.txt");
+		File arquivo = new File("C:\\Users\\Area de estudo\\git\\Leitura-escrita-TXT-e-Excel-com-apache-POI-e-JSON-GSON\\arquivos\\arquivo.csv");
 		
 		if(!arquivo.exists()) {
 			arquivo.createNewFile();
