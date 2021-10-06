@@ -16,7 +16,7 @@ public class LerArquivoTxt {
 	
 		Scanner lerArquivo = new Scanner(entraArquivo, "UTF-8");
 		
-		List<Pessoa> pessoas =new ArrayList<Pessoa>();
+		List<Pessoa> pessoas = new ArrayList<Pessoa>();
 		
 		while(lerArquivo.hasNext()) {
 			
