@@ -13,6 +13,8 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 
+/* Nessa Classe lemos a planilha*/
+
 public class ApachePoi2 {
 
 	public static void main(String[] args) throws IOException {

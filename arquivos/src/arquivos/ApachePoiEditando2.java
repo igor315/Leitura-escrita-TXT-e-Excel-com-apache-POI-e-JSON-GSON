@@ -10,9 +10,7 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 
-/*Nessa classe editamos a planilha*/
-
-public class ApachePoiEditando {
+public class ApachePoiEditando2 {
 
 	public static void main(String[] args) throws Exception {
 		
@@ -32,8 +30,9 @@ public class ApachePoiEditando {
 			
 			int numeroCelulas = linha.getPhysicalNumberOfCells(); /*quantidade de celula na linha*/
 			
-			Cell cell = linha.createCell(numeroCelulas);/*cria uma nova linha*/
-			cell.setCellValue("5.487,25");
+			String valorCelula = linha.getCell(0).getStringCellValue();
+			
+			linha.getCell(0).setCellValue(valorCelula + " * Valor gravado na aula **");
 		}
 		
 		entrada.close();
