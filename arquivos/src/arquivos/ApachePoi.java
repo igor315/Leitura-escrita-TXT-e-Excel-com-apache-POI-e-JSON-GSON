@@ -14,6 +14,7 @@ import org.apache.poi.ss.usermodel.Row;
 public class ApachePoi {
 
 	public static void main(String[] args) throws IOException {
+		String nome;
 		
 		File file = new File("C:\\Users\\Area de estudo\\git\\Leitura-escrita-TXT-e-Excel-com-apache-POI-e-JSON-GSON\\arquivos\\arquivo_excel.xls");
 	
@@ -74,5 +75,6 @@ public class ApachePoi {
 		saida.close();
 		
 		System.out.println("Planilha foi criada!");
+		
 	}
 }
