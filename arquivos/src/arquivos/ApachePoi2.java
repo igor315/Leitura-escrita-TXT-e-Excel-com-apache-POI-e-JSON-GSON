@@ -23,7 +23,9 @@ public class ApachePoi2 {
 	
 		/*Prepara a entrada do arquivo excel para ler*/
 		HSSFWorkbook hssfWorkbook = new HSSFWorkbook(entrada);
-		HSSFSheet planilha = hssfWorkbook.getSheetAt(0); /*pega a primeira planilha do nosso arquivo excel*/
+		
+//		pega a primeira planilha do nosso arquivo excel
+		HSSFSheet planilha = hssfWorkbook.getSheetAt(0);
 		
 		Iterator<Row> linhaIterator = planilha.iterator();
 		
@@ -31,7 +33,9 @@ public class ApachePoi2 {
 		
 		/*Enquanto tiver linha no arquivo excel*/
 		while (linhaIterator.hasNext()) {
-			Row linha = linhaIterator.next();/*Dados da pessoa na linha*/
+			
+//			Dados da pessoa na linha
+			Row linha = linhaIterator.next();
 			
 			Iterator<Cell> celulas = linha.iterator();
 			
@@ -51,15 +55,20 @@ public class ApachePoi2 {
 				case 2:
 					pessoa.setIdade(Double.valueOf(cell.getNumericCellValue()).intValue());
 					break;
+				case 3:
+					pessoa.setTelefone(cell.getStringCellValue());
+					break;
 				}
 			}/*Fim das celulas da linha*/
 			
 			pessoas.add(pessoa);
 		}
 		
-		entrada.close();/*Terminou de ler o arquivo excel*/
+//		Terminou de ler o arquivo excel
+		entrada.close();
 		
-		for (Pessoa pessoa : pessoas) {/*Poderia gravar no banco de dados, mandar e-mail*/
+//		Poderia gravar no banco de dados, mandar e-mail
+		for (Pessoa pessoa : pessoas) {
 			System.out.println(pessoa);
 		}
 	}
