@@ -21,18 +21,25 @@ public class ApachePoiEditando {
 
 		FileInputStream entrada = new FileInputStream(file);
 		
-		/*Prepara a entrada do arquivo xls excel*/
+//		Prepara a entrada do arquivo xls excel
 		HSSFWorkbook hssfWorkbook = new HSSFWorkbook(entrada);
-		HSSFSheet planilha = hssfWorkbook.getSheetAt(0); /*Pegando a planilha*/
+		
+//		Pegando a planilha
+		HSSFSheet planilha = hssfWorkbook.getSheetAt(0); 
 		
 		Iterator<Row> linhaIterator = planilha.iterator();
 		
-		while(linhaIterator.hasNext()) {/*Enquanto tiver linha*/
-			Row linha = linhaIterator.next();/*Dados da pessoa na linha*/
+		/*Enquanto tiver linha*/
+		while(linhaIterator.hasNext()) {
 			
-			int numeroCelulas = linha.getPhysicalNumberOfCells(); /*quantidade de celula na linha*/
+			/*Dados da pessoa na linha*/
+			Row linha = linhaIterator.next();
 			
-			Cell cell = linha.createCell(numeroCelulas);/*cria uma nova linha*/
+			/*quantidade de celula na linha*/
+			int numeroCelulas = linha.getPhysicalNumberOfCells(); 
+			
+			/*cria uma nova linha*/
+			Cell cell = linha.createCell(numeroCelulas);
 			cell.setCellValue("5.487,25");
 		}
 		
