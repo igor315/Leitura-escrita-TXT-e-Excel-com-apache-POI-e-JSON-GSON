@@ -21,14 +21,20 @@ public class ApachePoiEditando2 {
 		
 		/*Prepara a entrada do arquivo xls excel*/
 		HSSFWorkbook hssfWorkbook = new HSSFWorkbook(entrada);
-		HSSFSheet planilha = hssfWorkbook.getSheetAt(0); /*Pegando a planilha*/
+		
+		/*Pegando a planilha*/
+		HSSFSheet planilha = hssfWorkbook.getSheetAt(0); 
 		
 		Iterator<Row> linhaIterator = planilha.iterator();
 		
-		while(linhaIterator.hasNext()) {/*Enquanto tiver linha*/
-			Row linha = linhaIterator.next();/*Dados da pessoa na linha*/
+		/*Enquanto tiver linha*/
+		while(linhaIterator.hasNext()) {
 			
-			int numeroCelulas = linha.getPhysicalNumberOfCells(); /*quantidade de celula na linha*/
+			/*Dados da pessoa na linha*/
+			Row linha = linhaIterator.next();
+			
+			/*quantidade de celula na linha*/
+			int numeroCelulas = linha.getPhysicalNumberOfCells(); 
 			
 			String valorCelula = linha.getCell(0).getStringCellValue();
 			
